@@ -5,6 +5,9 @@ phases:
     runtime-versions:
       nodejs: 18
     commands:
+      - echo "Checking node and npm versions..."
+      - node -v
+      - npm -v
       - echo "Installing dependencies..."
       - npm ci --legacy-peer-deps
 
@@ -17,3 +20,4 @@ artifacts:
   files:
     - '**/*'
   base-directory: build
+  discard-paths: no
